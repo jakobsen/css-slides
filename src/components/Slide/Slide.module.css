@@ -1,0 +1,10 @@
+.wrapper {
+  height: 100vh;
+  scroll-snap-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.content {
+
+}
