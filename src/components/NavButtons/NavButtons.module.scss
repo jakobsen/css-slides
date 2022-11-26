@@ -1,0 +1,22 @@
+.wrapper {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 8px;
+}
+
+.button {
+  padding: 4px;
+  appearance: none;
+  border: none;
+  background: none;
+  color: hsl(0deg 0% 40%);
+  transition: color 100ms;
+
+  &:hover {
+    color: hsl(0deg 0% 80%);
+    transition: color 400ms;
+  }
+}
