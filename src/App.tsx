@@ -1,4 +1,4 @@
-import { LegacyRef, MutableRefObject, RefObject, useRef } from "react"
+import { useRef } from "react"
 import styles from "./app.module.css"
 import NavButtons from "./components/NavButtons"
 import Slide from "./components/Slide"
