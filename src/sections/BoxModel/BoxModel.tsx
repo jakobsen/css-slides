@@ -1,4 +1,5 @@
 import BoxModelDemo from "@components/BoxModelDemo"
+import BoxSizingDemo from "@components/BoxSizingDemo"
 import Slide from "@components/Slide"
 import styles from "./BoxModel.module.css"
 
@@ -20,6 +21,9 @@ export default function BoxModelSection() {
           <br />
           <span className={styles.bracket}>&#125;</span>
         </div>
+      </Slide>
+      <Slide>
+        <BoxSizingDemo />
       </Slide>
     </>
   )

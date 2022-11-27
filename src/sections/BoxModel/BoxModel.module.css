@@ -1,10 +1,10 @@
 .codeblock {
   font-size: 2rem;
-  font-family: Monaco;
+  font-family: var(--code-font);
   line-height: 1.4;
   border-radius: 8px;
   padding: 64px;
-  border: 2px solid hsl(0deg 0% 90%);
+  border: 3px solid hsl(0deg 0% 100% / 0.5);
 }
 
 .selector {
