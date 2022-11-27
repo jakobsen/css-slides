@@ -1,0 +1,24 @@
+.codeblock {
+  font-size: 2rem;
+  font-family: Monaco;
+  line-height: 1.4;
+  border-radius: 8px;
+  padding: 64px;
+  border: 2px solid hsl(0deg 0% 90%);
+}
+
+.selector {
+  color: var(--code-dark-blue);
+}
+
+.bracket {
+  color: var(--code-yellow);
+}
+
+.property {
+  color: var(--code-light-blue);
+}
+
+.value {
+  color: var(--code-orange);
+}
