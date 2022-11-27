@@ -1,0 +1,27 @@
+.box {
+  width: 400px;
+  height: 400px;
+  background-color: var(--pink);
+  border-radius: 8px;
+  margin-top: -128px;
+  padding: 20px;
+  border: 10px solid white;
+  display: grid;
+  place-items: center;
+  font-size: 1.44rem;
+  text-align: center;
+}
+
+.fieldset {
+  padding: 16px 16px 24px;
+  border-radius: 2px;
+  display: flex;
+  gap: 24px;
+  font-size: 1.2rem;
+  width: max-content;
+  margin-inline: auto;
+  position: absolute;
+  bottom: 500px;
+  left: 0;
+  right: 0;
+}
