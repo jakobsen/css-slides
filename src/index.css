@@ -13,9 +13,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --code-dark-blue: #5e91c4;
+  --code-yellow: #edca39;
+  --code-light-blue: #9fcfee;
+  --code-orange: #bb8c75;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  
 }
