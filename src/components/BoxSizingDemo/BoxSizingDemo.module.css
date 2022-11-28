@@ -1,9 +1,16 @@
+.wrapper {
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .box {
   width: 400px;
   height: 400px;
   background-color: var(--pink);
   border-radius: 8px;
-  margin-top: -128px;
   padding: 20px;
   border: 10px solid white;
   display: grid;
@@ -20,8 +27,4 @@
   font-size: 1.2rem;
   width: max-content;
   margin-inline: auto;
-  position: absolute;
-  bottom: 500px;
-  left: 0;
-  right: 0;
 }

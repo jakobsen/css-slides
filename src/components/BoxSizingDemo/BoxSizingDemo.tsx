@@ -4,7 +4,7 @@ import LineSection from "./LineSection/LineSection"
 
 export default function BoxSizingDemo() {
   const [boxSizing, setBoxSizing] = useState<"border-box" | "content-box">(
-    "content-box"
+    "border-box"
   )
   const [boxWidth, setBoxWidth] = useState<number>()
   const boxRef = useRef<HTMLDivElement>(null)
@@ -15,7 +15,7 @@ export default function BoxSizingDemo() {
   }, [boxSizing])
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <LineSection />
       <div style={{ boxSizing }} className={styles.box} ref={boxRef}>
         <div>
@@ -36,23 +36,23 @@ export default function BoxSizingDemo() {
           <input
             type="radio"
             name="box-sizing"
-            id="content-box-radio"
-            value="content-box"
-            onChange={() => setBoxSizing("content-box")}
-            checked={boxSizing == "content-box"}
-          />
-          <label htmlFor="content-box-radio">content-box</label>
-        </div>
-        <div>
-          <input
-            type="radio"
-            name="box-sizing"
             id="border-box-radio"
             value="border-box"
             onChange={() => setBoxSizing("border-box")}
             checked={boxSizing == "border-box"}
           />
           <label htmlFor="border-box-radio">border-box</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            name="box-sizing"
+            id="content-box-radio"
+            value="content-box"
+            onChange={() => setBoxSizing("content-box")}
+            checked={boxSizing == "content-box"}
+          />
+          <label htmlFor="content-box-radio">content-box</label>
         </div>
       </fieldset>
     </div>

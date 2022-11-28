@@ -8,6 +8,7 @@ export default function LineSection() {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 409.59 49.29"
         width={409.59}
+        height="auto"
       >
         <path
           fill="none"
