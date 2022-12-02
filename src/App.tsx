@@ -1,4 +1,5 @@
-import { useRef } from "react"
+import FullScreenButton from "@components/FullScreenButton"
+import { useEffect, useRef } from "react"
 import styles from "./app.module.css"
 import NavButtons from "./components/NavButtons"
 import BoxModelSection from "./sections/BoxModel"
@@ -8,6 +9,19 @@ import ZIndexSection from "./sections/ZIndex"
 
 function App() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const listener = (e: { key: string }) => {
+      if (e.key == "ArrowRight") {
+        scrollContainerRef.current?.scrollBy(0, window.innerHeight)
+      } else if (e.key == "ArrowLeft") {
+        scrollContainerRef.current?.scrollBy(0, -window.innerHeight)
+      }
+    }
+    window.addEventListener("keydown", listener)
+    return () => window.removeEventListener("keydown", listener)
+  }, [])
+
   return (
     <div className={styles.wrapper} ref={scrollContainerRef}>
       <BoxModelSection />
@@ -15,6 +29,7 @@ function App() {
       <ZIndexSection />
       <ColorSection />
 
+      <FullScreenButton scrollContainerRef={scrollContainerRef} />
       <NavButtons scrollContainerRef={scrollContainerRef} />
     </div>
   )

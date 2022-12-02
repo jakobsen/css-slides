@@ -1,0 +1,16 @@
+.button {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  padding: 4px;
+  appearance: none;
+  border: none;
+  background: none;
+  color: hsl(0deg 0% 40%);
+  transition: color 100ms;
+
+  &:hover {
+    color: hsl(0deg 0% 80%);
+    transition: color 400ms;
+  }
+}
