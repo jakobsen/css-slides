@@ -4,3 +4,12 @@
   overflow: auto;
   background-color: var(--background-color);
 }
+
+.list {
+  font-size: 3rem;
+  list-style: "🔥";
+}
+
+.list li {
+  margin-bottom: 2rem;
+}
