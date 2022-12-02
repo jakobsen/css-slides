@@ -4,6 +4,7 @@ import styles from "./CodeDemo.module.css"
 
 interface CodeDemoProps {
   code?: string
+  otherFiles?: Record<string, Record<string, unknown>>
 }
 
 const DEFAULT_CODE = `<template>
@@ -41,7 +42,10 @@ name: "App",
 </script>
 `
 
-export default function CodeDemo({ code = DEFAULT_CODE }: CodeDemoProps) {
+export default function CodeDemo({
+  code = DEFAULT_CODE,
+  otherFiles,
+}: CodeDemoProps) {
   return (
     <Sandpack
       theme={freeCodeCampDark}
@@ -57,6 +61,7 @@ export default function CodeDemo({ code = DEFAULT_CODE }: CodeDemoProps) {
         "/src/App.vue": {
           code,
         },
+        ...otherFiles,
       }}
       template="vue"
     />
