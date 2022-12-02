@@ -1,19 +1,22 @@
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import styles from "./HslDemo.module.css"
 
 export default function HslDemo() {
   const [hue, setHue] = useState(0)
   const [displayHsl, setDisplayHsl] = useState("")
   const percentages = [10, 20, 30, 40, 50, 60, 70, 80, 90]
-  const rows: Array<Array<{ saturation: number; lightness: number }>> = []
-  percentages.forEach((lightness) => {
-    rows.push(
-      percentages.map((saturation) => ({
-        lightness,
-        saturation,
-      }))
-    )
-  })
+  const rows = useMemo(() => {
+    const tempRows: Array<Array<{ saturation: number; lightness: number }>> = []
+    percentages.forEach((lightness) => {
+      tempRows.push(
+        percentages.map((saturation) => ({
+          lightness,
+          saturation,
+        }))
+      )
+    })
+    return tempRows
+  }, [hue])
   return (
     <div>
       <div className={styles.inputWrapper}>
