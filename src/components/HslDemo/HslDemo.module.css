@@ -20,7 +20,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 48px repeat(9, 1fr);
+  grid-template-columns: 48px repeat(10, 1fr);
   width: 90vw;
 }
 
