@@ -1,0 +1,55 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  border: 2px solid;
+  padding: 16px 24px;
+  width: 300px;
+  margin: 0 auto 32px;
+}
+
+.label {
+  opacity: 0.5;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 48px repeat(9, 1fr);
+  width: 90vw;
+}
+
+.box {
+  width: auto;
+  height: 6vh;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+}
+
+.saturationLabel {
+  font-size: 1.44rem;
+  grid-column: 1 / -1;
+  text-align: center;
+  padding-bottom: 8px;
+  margin-bottom: 0;
+}
+
+.lightnessLabel {
+  font-size: 1.44rem;
+  place-self: center;
+  transform: rotate(-90deg);
+  grid-row: 2 / 12;
+  margin-bottom: 0;
+}
+
+.displayHsl {
+  font-size: 3rem;
+  height: 3rem;
+  text-align: center;
+}

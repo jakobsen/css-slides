@@ -2,8 +2,9 @@ import { useRef } from "react"
 import styles from "./app.module.css"
 import NavButtons from "./components/NavButtons"
 import BoxModelSection from "./sections/BoxModel"
-import PositioningSection from "./sections/Positioning/Positioning"
-import ZIndexSection from "./sections/ZIndex/ZIndex"
+import ColorSection from "./sections/Color"
+import PositioningSection from "./sections/Positioning"
+import ZIndexSection from "./sections/ZIndex"
 
 function App() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
@@ -12,6 +13,7 @@ function App() {
       <BoxModelSection />
       <PositioningSection />
       <ZIndexSection />
+      <ColorSection />
 
       <NavButtons scrollContainerRef={scrollContainerRef} />
     </div>
