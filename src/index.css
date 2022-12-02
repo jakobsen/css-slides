@@ -27,3 +27,8 @@ body {
   color: var(--text-color);
   font-family: var(--font);
 }
+
+code,
+pre {
+  font-family: var(--code-font);
+}
