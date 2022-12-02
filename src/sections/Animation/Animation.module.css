@@ -1,0 +1,14 @@
+.title {
+  animation: breathe 2s ease-in-out infinite alternate;
+}
+
+@keyframes breathe {
+  from {
+    transform: scale(1);
+    color: currentColor;
+  }
+  to {
+    transform: scale(2);
+    color: deeppink;
+  }
+}
